@@ -3,6 +3,10 @@
   "name": "Das weisse Dorf",
   "info": [
     {
+      "key": "Bühne&Kostüm",
+      "value": "Thomas Garvie"
+    },
+    {
       "key": "Text",
       "value": "Teresa Dopler"
     },
