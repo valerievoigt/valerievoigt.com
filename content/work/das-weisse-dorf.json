@@ -3,6 +3,10 @@
   "name": "Das weisse Dorf",
   "info": [
     {
+      "key": "Choreografie",
+      "value": "Karin Pauer"
+    },
+    {
       "key": "mit",
       "value": "Naemi Latzer, Johannes Benecke, Paula Dominici, Alberto Cissello"
     },
