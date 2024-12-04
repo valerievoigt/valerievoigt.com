@@ -1,6 +1,12 @@
 {
   "startDate": "2022-03-01T23:00:00.000Z",
   "name": "Das weisse Dorf",
+  "info": [
+    {
+      "key": "Text",
+      "value": "Teresa Dopler"
+    }
+  ],
   "detailedInfo": "",
   "images": [
     "/uploads/46_IMG_1605.jpg",
