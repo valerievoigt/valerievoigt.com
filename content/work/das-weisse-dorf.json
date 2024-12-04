@@ -3,8 +3,8 @@
   "name": "Das weisse Dorf",
   "info": [
     {
-      "key": "Bühne&Kostüm",
-      "value": "Thomas Garvie"
+      "key": "Musik",
+      "value": "Scott Douglas Gordon"
     },
     {
       "key": "Text",
@@ -13,6 +13,10 @@
     {
       "key": "Regie",
       "value": "Valerie Voigt"
+    },
+    {
+      "key": "Bühne&Kostüm",
+      "value": "Thomas Garvie"
     }
   ],
   "detailedInfo": "",
