@@ -3,6 +3,10 @@
   "name": "Das Mädchen mit dem Fingerhut",
   "info": [
     {
+      "key": "Chor",
+      "value": "JAMzi"
+    },
+    {
       "key": "Musik",
       "value": "David Gratzer"
     },
