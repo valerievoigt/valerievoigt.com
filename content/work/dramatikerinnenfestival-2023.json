@@ -3,16 +3,8 @@
   "name": "DramatikerInnenfestival 2023",
   "info": [
     {
-      "key": "mit",
-      "value": "Sissi Noé, Alicia Peckelsen"
-    },
-    {
-      "key": "Ausstattung",
-      "value": "Andrea Fischer"
-    },
-    {
-      "key": "Regie ",
-      "value": "Valerie Voigt"
+      "key": "von",
+      "value": "Hannah Bründl \"VÂLANDINNEN\""
     },
     {
       "key": "von",
@@ -23,8 +15,16 @@
       "value": "Sarah Amanda Dulgeris \"Makros Lykos\""
     },
     {
-      "key": "von",
-      "value": "Hannah Bründl \"VÂLANDINNEN\""
+      "key": "mit",
+      "value": "Sissi Noé, Alicia Peckelsen"
+    },
+    {
+      "key": "Ausstattung",
+      "value": "Andrea Fischer"
+    },
+    {
+      "key": "Regie ",
+      "value": "Valerie Voigt"
     }
   ],
   "detailedInfo": "",
