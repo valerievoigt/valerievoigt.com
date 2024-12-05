@@ -3,6 +3,10 @@
   "name": "drei sind wir",
   "info": [
     {
+      "key": "Bühne",
+      "value": "Eylien König"
+    },
+    {
       "key": "Musik",
       "value": "Rupert Derschmidt"
     },
