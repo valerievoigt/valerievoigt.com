@@ -1,6 +1,13 @@
 {
   "startDate": "2022-05-09T22:00:00.000Z",
   "name": "DramatikerInnenfestival 2023",
+  "info": [
+    {
+      "key": "von",
+      "value": "Hannah Bründl \"VÂLANDINNEN\""
+    }
+  ],
+  "detailedInfo": "",
   "images": [
     "/uploads/IMG_2676.jpg",
     "/uploads/IMG_2674.jpg",
