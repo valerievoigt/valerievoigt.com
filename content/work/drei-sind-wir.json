@@ -3,6 +3,10 @@
   "name": "drei sind wir",
   "info": [
     {
+      "key": "Musik",
+      "value": "Rupert Derschmidt"
+    },
+    {
       "key": "Licht",
       "value": "Ivan Manojlovic"
     },
