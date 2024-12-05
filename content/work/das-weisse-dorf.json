@@ -3,6 +3,10 @@
   "name": "Das weisse Dorf",
   "info": [
     {
+      "key": "Fotos",
+      "value": "Andreas Friess"
+    },
+    {
       "key": "Text",
       "value": "Teresa Dopler"
     },
