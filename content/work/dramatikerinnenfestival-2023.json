@@ -3,10 +3,6 @@
   "name": "DramatikerInnenfestival 2023",
   "info": [
     {
-      "key": "Fotos",
-      "value": "Noemí Conesa"
-    },
-    {
       "key": "von",
       "value": "Hannah Bründl \"VÂLANDINNEN\""
     },
@@ -29,6 +25,10 @@
     {
       "key": "mit",
       "value": "Sissi Noé, Alicia Peckelsen"
+    },
+    {
+      "key": "Fotos",
+      "value": "Noemí Conesa"
     }
   ],
   "detailedInfo": "",
