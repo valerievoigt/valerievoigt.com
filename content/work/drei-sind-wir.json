@@ -3,6 +3,10 @@
   "name": "drei sind wir",
   "info": [
     {
+      "key": "Video",
+      "value": "Alexander Richter"
+    },
+    {
       "key": "von",
       "value": "Wolfram Höll"
     },
