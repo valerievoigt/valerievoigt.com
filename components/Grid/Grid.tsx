@@ -263,7 +263,7 @@ const renderPostListItem = (item: WorkConnectionEdges, i: number) => {
       >
         <Box p={"5"}>
           <Text
-            style={{ color: "#D920EA" }}
+            style={{ color: "#D920EA", wordBreak: "break-word" }}
             size={{ initial: "6", md: "9" }}
             weight={"bold"}
             wrap={"pretty"}
