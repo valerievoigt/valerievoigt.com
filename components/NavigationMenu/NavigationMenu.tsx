@@ -3,16 +3,18 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useEditState } from "tinacms/dist/react";
+import { pageInEditMode } from "./logic";
 import "./styles.css";
 
 export default function NavigationMenu() {
   const pathname = usePathname();
-  console.log("Path: ", pathname);
+  const { edit } = useEditState();
 
   return (
     <RadixNavigationMenu.Root className="RadixNavigationMenuRoot">
       <RadixNavigationMenu.List className="RadixNavigationMenuList">
-        <RadixNavigationMenu.Item>
+        <RadixNavigationMenu.Item className="with-bg">
           <RadixNavigationMenu.Link
             href="/"
             title="Zur Startseite"
@@ -29,6 +31,7 @@ export default function NavigationMenu() {
                 objectFit: "contain",
                 marginTop: "11px",
               }}
+              layout={"fixed"}
             ></Image>
           </RadixNavigationMenu.Link>
         </RadixNavigationMenu.Item>
@@ -38,7 +41,7 @@ export default function NavigationMenu() {
             className={`RadixNavigationMenuLink ${
               pathname === "/works" && "active-link"
             }`}
-            href="/works"
+            href={edit ? pageInEditMode("works") : "/works"}
           >
             <Text size={"4"}>Work</Text>
           </RadixNavigationMenu.Link>
@@ -49,7 +52,7 @@ export default function NavigationMenu() {
             className={`RadixNavigationMenuLink ${
               pathname === "/about" && "active-link"
             }`}
-            href="/about"
+            href={edit ? pageInEditMode("about") : "/about"}
           >
             <Text size={"4"}>About</Text>
           </RadixNavigationMenu.Link>
@@ -60,7 +63,7 @@ export default function NavigationMenu() {
             className={`RadixNavigationMenuLink ${
               pathname === "/contact" && "active-link"
             }`}
-            href="/contact"
+            href={edit ? pageInEditMode("contact") : "/contact"}
           >
             <Text size={"4"}>Contact</Text>
           </RadixNavigationMenu.Link>

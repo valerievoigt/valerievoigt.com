@@ -45,11 +45,7 @@ export default function Form({ title }: FormProps) {
             </Text>
           )}
 
-          <FormField
-            inputType="text"
-            name={"name"}
-            validations={["valueMissing"]}
-          />
+          <FormField name={"name"} validations={["valueMissing"]} />
 
           <FormField
             inputType="email"

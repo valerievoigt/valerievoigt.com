@@ -1,3 +1,12 @@
+.with-bg {
+    background: radial-gradient(circle, #7c000a 50%, transparent 51%);
+    background-position: center;
+    background-size: calc(100% + 8px) calc(100% + 8px);
+    /* Extend into padding */
+    background-clip: padding-box;
+    padding: 0px 4px;
+    margin-right: 6px;
+}
 .RadixNavigationMenuRoot {
     top: 16px;
     position: fixed;

@@ -12,7 +12,7 @@ export const FormField = ({
   name,
   validations,
 }: {
-  inputType: "email" | "text";
+  inputType?: "email" | "text";
   name: string;
   validations: Form.FormMessageProps["match"][];
 }) => (
@@ -45,8 +45,10 @@ export const FormField = ({
           type="email"
           required
         ></TextField.Root>
-      ) : (
+      ) : inputType === "text" ? (
         <TextArea placeholder="Geben Sie Ihre Anfrage ein" required />
+      ) : (
+        <TextField.Root placeholder="Geben Sie Ihren Namen ein" required />
       )}
     </Form.Control>
   </Form.Field>

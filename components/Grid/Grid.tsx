@@ -291,15 +291,28 @@ const renderPostListItem = (item: WorkConnectionEdges, i: number) => {
 };
 
 const renderReferenceItem = (item: any, i: number) => (
-  <Image
-    priority={i === 0}
-    src={item}
-    alt={""}
-    fill
-    sizes="100vw"
-    style={{
-      zIndex: "-1",
-      objectFit: "cover",
-    }}
-  />
+  <Flex
+    as={"div"}
+    position="relative"
+    style={{ width: "100%", height: "100%" }}
+  >
+    <Link
+      href={item}
+      target={"_blank"}
+      className="test"
+      style={{ width: "100%", height: "100%" }}
+    ></Link>
+    <Image
+      priority={i === 0}
+      src={item}
+      alt={""}
+      fill
+      quality={100}
+      sizes="100vw"
+      style={{
+        zIndex: "-1",
+        objectFit: "cover",
+      }}
+    />
+  </Flex>
 );
