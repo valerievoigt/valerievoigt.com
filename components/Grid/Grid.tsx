@@ -299,7 +299,6 @@ const renderReferenceItem = (item: any, i: number) => (
     <Link
       href={item}
       target={"_blank"}
-      className="test"
       style={{ width: "100%", height: "100%" }}
     ></Link>
     <Image
