@@ -1,0 +1,11 @@
+.hero-text {
+    font-size: 30px;
+    font-weight: "700";
+}
+
+
+@media screen and (min-width: 680px) {
+    .hero-text {
+        font-size: 90px;
+    }
+}

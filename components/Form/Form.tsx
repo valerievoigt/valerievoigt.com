@@ -29,6 +29,7 @@ export default function Form({ title }: FormProps) {
             const formData = Object.fromEntries(
               new FormData(event.currentTarget)
             ) as {
+              name: string;
               email: string;
               anfrage: string;
             };
@@ -43,6 +44,13 @@ export default function Form({ title }: FormProps) {
               {title["de"]}
             </Text>
           )}
+
+          <FormField
+            inputType="text"
+            name={"name"}
+            validations={["valueMissing"]}
+          />
+
           <FormField
             inputType="email"
             name={"email"}

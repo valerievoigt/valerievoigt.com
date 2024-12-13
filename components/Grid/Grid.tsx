@@ -203,9 +203,9 @@ export default function Grid({
 
   return (
     <RadixGrid
-      py={"2"}
+      py={"9"}
       columns={{ xs: "1", md: "2" }}
-      gap={"2"}
+      gap={"7"}
       className="no-scrollbar"
       style={{ maxWidth: "100vw" }}
     >
@@ -261,7 +261,7 @@ const renderPostListItem = (item: WorkConnectionEdges, i: number) => {
         className="colored"
         href={`/works/${item.node?._sys.filename}`}
       >
-        <Box p={"4"}>
+        <Box p={"5"}>
           <Text
             style={{ color: "#D920EA" }}
             size={{ initial: "6", md: "9" }}

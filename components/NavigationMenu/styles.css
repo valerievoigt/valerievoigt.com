@@ -12,9 +12,8 @@
     display: flex;
     justify-content: center;
     background-color: var(--accent-9);
-    padding: 4px 6px;
-        padding-top: 6px;
-    border-radius: 6px;
+    padding: 5px 20px;
+        border-radius: 20px;
     list-style: none;
     margin: 0;
     box-shadow: var(--shadow-1);
@@ -22,13 +21,12 @@
 
 .RadixNavigationMenuTrigger,
 .RadixNavigationMenuLink {
-    padding: 8px 12px;
+    padding: 7px 16px;
     outline: none;
     user-select: none;
     font-weight: 500;
     line-height: 1;
-    border-radius: 4px;
-    font-size: 15px;
+    border-radius: 20px;
     color: var(--black-1);
 }
 

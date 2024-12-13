@@ -65,26 +65,31 @@ export default function Slideshow({
         ref={slideshow as LegacyRef<HTMLDivElement>}
         style={{ scrollSnapType: "x mandatory" }}
       >
-        <Heading
+        <Flex
+          height={{ initial: "66px", md: "114px" }}
           style={{
-            color: "#EA3FB8",
             position: "absolute",
             top:
               heading === "Upper third"
-                ? "30%"
+                ? "35%"
                 : heading === "Middle"
                 ? "50%"
                 : "75%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             zIndex: heading !== "Invisible" ? 0 : 1,
+            color: "#cd00e4",
           }}
-          size={{ initial: "6", md: "9" }}
-          as={"h1"}
-          align={"center"}
+          direction={"column"}
+          justify={"between"}
         >
-          VALERIE VOIGT
-        </Heading>
+          <Heading style={{ textAlign: "center" }} className="hero-text">
+            VALERIE
+          </Heading>
+          <Heading style={{ textAlign: "center" }} className="hero-text">
+            VOIGT
+          </Heading>
+        </Flex>
         {slides.map((slide, i) => (
           <Flex
             className="slide"
