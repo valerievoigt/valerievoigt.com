@@ -35,7 +35,7 @@ export const defaultComponents: Components<{}> = {
       alt={""}
       fill
       quality={100}
-      sizes="100vw"
+      sizes="100vh"
       style={{
         zIndex: "-1",
         objectFit: "cover",
