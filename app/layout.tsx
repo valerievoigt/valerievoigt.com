@@ -1,5 +1,6 @@
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import type { Metadata } from "next";
 import { Kode_Mono } from "next/font/google";
 import React from "react";
 import "../styles/main.css";
@@ -9,6 +10,13 @@ const kode_mono = Kode_Mono({
   display: "swap",
   variable: "--font-kode_mono",
 });
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Valerie Voigt",
+    default: "Valerie Voigt",
+  },
+};
 
 export default function RootLayout({
   children,

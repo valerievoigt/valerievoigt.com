@@ -3,13 +3,10 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEditState } from "tinacms/dist/react";
-import { pageInEditMode } from "./logic";
 import "./styles.css";
 
 export default function NavigationMenu() {
   const pathname = usePathname();
-  const { edit } = useEditState();
 
   return (
     <RadixNavigationMenu.Root className="RadixNavigationMenuRoot">
@@ -41,7 +38,7 @@ export default function NavigationMenu() {
             className={`RadixNavigationMenuLink ${
               pathname === "/works" && "active-link"
             }`}
-            href={edit ? pageInEditMode("works") : "/works"}
+            href={"/works"}
           >
             <Text size={"4"}>Work</Text>
           </RadixNavigationMenu.Link>
@@ -52,7 +49,7 @@ export default function NavigationMenu() {
             className={`RadixNavigationMenuLink ${
               pathname === "/about" && "active-link"
             }`}
-            href={edit ? pageInEditMode("about") : "/about"}
+            href={"/about"}
           >
             <Text size={"4"}>About</Text>
           </RadixNavigationMenu.Link>
@@ -63,7 +60,7 @@ export default function NavigationMenu() {
             className={`RadixNavigationMenuLink ${
               pathname === "/contact" && "active-link"
             }`}
-            href={edit ? pageInEditMode("contact") : "/contact"}
+            href={"/contact"}
           >
             <Text size={"4"}>Contact</Text>
           </RadixNavigationMenu.Link>

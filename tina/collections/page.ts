@@ -1,6 +1,6 @@
 import type { Collection } from "tinacms";
 import { allTemplates } from "../components";
-import { customToolbar } from "../fields";
+import { customToolbar, SEOField } from "../fields";
 import {
   CHARACTERS_REGEX,
   CHARACTERS_REGEX_HINT,
@@ -13,6 +13,7 @@ export default {
   path: "content/page",
   format: "mdx",
   fields: [
+    { ...SEOField },
     {
       name: "name",
       label: "Name",

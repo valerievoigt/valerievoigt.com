@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import client from "../../tina/__generated__/client";
+import type { Page } from "../../tina/__generated__/types";
+import type { GenerateMetadataProps } from "../../tina/types";
 import ClientPage from "./client-page";
 
 export async function generateStaticParams() {
@@ -8,6 +11,21 @@ export async function generateStaticParams() {
   }));
 
   return paths || [];
+}
+
+export async function generateMetadata({
+  params,
+}: GenerateMetadataProps): Promise<Metadata> {
+  const title = (await params).filename[0];
+
+  const page = await client.queries.page({
+    relativePath: `${title}.mdx`,
+  });
+
+  return {
+    title: title[0].toUpperCase() + title.slice(1),
+    description: (page.data.page as Page & { seo: string }).seo,
+  };
 }
 
 export default async function Page({
