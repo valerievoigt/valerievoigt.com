@@ -4,10 +4,6 @@
   "name": "Capri",
   "info": [
     {
-      "key": "Ton",
-      "value": "Benjamin Bauer"
-    },
-    {
       "key": "Von",
       "value": "Anna Gschnitzer"
     },
@@ -38,6 +34,10 @@
     {
       "key": "Licht",
       "value": "Christoph Pichler"
+    },
+    {
+      "key": "Ton",
+      "value": "Benjamin Bauer"
     },
     {
       "key": "Regieassistenz",
