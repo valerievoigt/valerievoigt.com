@@ -1,7 +1,29 @@
 {
   "seo": "Taxi Helena wurde am Kosmos Theater Wien von der Regisseurin Valerie Voigt inszeniert. ",
-  "startDate": "2023-11-24T23:00:00.000Z",
+  "startDate": "2021-11-24T23:00:00.000Z",
   "name": "Taxi Helena Wortstattnächte",
+  "info": [
+    {
+      "key": "Von",
+      "value": "Xaver Schuhmacher"
+    },
+    {
+      "key": "Regie",
+      "value": "Valerie Voigt"
+    },
+    {
+      "key": "Ausstattung",
+      "value": "Denise Leisentritt und Christina Flügger"
+    },
+    {
+      "key": "mit",
+      "value": "Thomas Frank, Martin Hemmer, Naemi Latzer, Petra Strasser, Tamara Semzov"
+    },
+    {
+      "key": "Fotos",
+      "value": "Anna Zehetgruber"
+    }
+  ],
   "detailedInfo": "Taxi Helena von Xaver Schumacher ist eine Komödie, in der die antiken Göttinnen Hera, Athene und Aphrodite und der Kapitalismus aufeinanderprallen, bis die Plastiksackerl platzen. Vom Spar in Sparta geht’s per Fähre nach Troja, wo selbst aus der Belagerung noch ein Geschäftsmodell entwickelt wird. Die Geburtsstunde von Airbnb.\n",
   "images": [
     "/uploads/Wortstattnächte25_day1_socialmedia-8.jpg",
