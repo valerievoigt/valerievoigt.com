@@ -64,6 +64,7 @@ export default {
       name: "trailer",
       label: "Trailer",
       type: "string",
+      description: "Link to a YouTube or Vimeo video",
     },
     {
       name: "images",
