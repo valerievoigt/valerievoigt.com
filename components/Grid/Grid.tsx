@@ -302,15 +302,7 @@ const renderReferenceItem = (item: any, i: number) => {
       position="relative"
       style={{ width: "100%", height: "100%" }}
     >
-      <Link
-        href={item}
-        target={"_blank"}
-        style={{ width: "100%", height: "100%" }}
-      ></Link>
-      {item &&
-      (item.includes(".mp4") ||
-        item.includes(".webm") ||
-        item.includes(".ogg")) ? (
+      {item && item.includes(".mp4") ? (
         <video
           src={item}
           controls
@@ -322,18 +314,24 @@ const renderReferenceItem = (item: any, i: number) => {
           }}
         />
       ) : (
-        <Image
-          priority={i === 0}
-          src={item}
-          alt={""}
-          fill
-          quality={75}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          style={{
-            zIndex: "-1",
-            objectFit: "cover",
-          }}
-        />
+        <Link
+          href={item}
+          target={"_blank"}
+          style={{ width: "100%", height: "100%" }}
+        >
+          <Image
+            priority={i === 0}
+            src={item}
+            alt={""}
+            fill
+            quality={75}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            style={{
+              zIndex: "-1",
+              objectFit: "cover",
+            }}
+          />
+        </Link>
       )}
     </Flex>
   );
