@@ -61,6 +61,11 @@ export default {
       toolbarOverride: customToolbar,
     },
     {
+      name: "trailer",
+      label: "Trailer",
+      type: "string",
+    },
+    {
       name: "images",
       label: "Images",
       type: "image",

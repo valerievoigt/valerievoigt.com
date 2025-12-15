@@ -9,6 +9,26 @@ import NavigationMenu from "../../../components/NavigationMenu/NavigationMenu";
 import type { WorkQuery } from "../../../tina/__generated__/types";
 import { defaultComponents } from "../../../tina/components";
 
+function convertToEmbedUrl(url: string): string {
+  // Handle YouTube watch URL
+  if (url.includes("youtube.com/watch")) {
+    const videoId = new URL(url).searchParams.get("v");
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  // Handle YouTube youtu.be URL
+  if (url.includes("youtu.be")) {
+    const videoId = url.split("/").pop();
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  // Handle Vimeo
+  if (url.includes("vimeo.com")) {
+    const videoId = url.split("/").pop();
+    return `https://player.vimeo.com/video/${videoId}`;
+  }
+  // Return as-is if already an embed URL or other format
+  return url;
+}
+
 interface ClientPageProps {
   query: string;
   variables: {
@@ -90,6 +110,18 @@ export default function ClientPage(props: ClientPageProps) {
             }}
           />
         </Container>
+
+        {work.trailer && (
+          <Container mt="6" mx="2">
+            <div className="iframe-container">
+              <iframe
+                loading="lazy"
+                src={convertToEmbedUrl(work.trailer)}
+                allowFullScreen
+              />
+            </div>
+          </Container>
+        )}
 
         <Container py={"2"} mx="2">
           <Grid
