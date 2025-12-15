@@ -60,6 +60,7 @@ export default {
       type: "rich-text",
       toolbarOverride: customToolbar,
     },
+    //
     {
       name: "trailer",
       label: "Trailer",
