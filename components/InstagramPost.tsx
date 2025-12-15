@@ -92,6 +92,7 @@ export default function InstagramPost({
               alt={"Logo of xxx"}
               width={32}
               height={32}
+              quality={75}
               style={{
                 maxWidth: "100%",
                 height: "auto",

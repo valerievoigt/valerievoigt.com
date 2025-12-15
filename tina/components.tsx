@@ -30,11 +30,11 @@ export const defaultComponents: Components<{}> = {
   },
   img: (props: { url: string; caption?: string; alt?: string }) => (
     <Image
-      priority
+      priority={false}
       src={props.url ?? ""}
-      alt={""}
+      alt={props.alt ?? ""}
       fill
-      quality={100}
+      quality={75}
       sizes="(min-width: 808px) 100%, 100vh"
       style={{
         zIndex: "-1",

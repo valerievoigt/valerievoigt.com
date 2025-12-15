@@ -210,24 +210,26 @@ export default function Grid({
       style={{ maxWidth: "100vw" }}
     >
       {gridItems &&
-        gridItems?.map((item: any, i) => (
-          <Box
-            minHeight={`${gridItemHeight}px`}
-            position={"relative"}
-            overflowX={"hidden"}
-            key={i}
-            ref={gridItemContainer as LegacyRef<HTMLDivElement>}
-          >
-            {variant === GridVariant["Rich-Text"] && renderRichTextItem(item)}
+        gridItems?.map((item: any, i) => {
+          return (
+            <Box
+              minHeight={`${gridItemHeight}px`}
+              position={"relative"}
+              overflowX={"hidden"}
+              key={i}
+              ref={gridItemContainer as LegacyRef<HTMLDivElement>}
+            >
+              {variant === GridVariant["Rich-Text"] && renderRichTextItem(item)}
 
-            {variant === GridVariant["Work-List"] &&
-              renderPostListItem(item, i)}
+              {variant === GridVariant["Work-List"] &&
+                renderPostListItem(item, i)}
 
-            {variant === GridVariant["Reference"] &&
-              typeof content === "string" &&
-              renderReferenceItem(item, i)}
-          </Box>
-        ))}
+              {variant === GridVariant["Reference"] &&
+                typeof content === "string" &&
+                renderReferenceItem(item, i)}
+            </Box>
+          );
+        })}
     </RadixGrid>
   );
 }
@@ -240,8 +242,9 @@ const renderRichTextItem = (item: any) => (
         <Image
           priority={false}
           src={props.url ?? ""}
-          alt={""}
+          alt={props.alt ?? ""}
           fill
+          quality={75}
           sizes="(max-width: 768px) 100vw, 33vw"
           style={{
             zIndex: "-1",
@@ -276,9 +279,10 @@ const renderPostListItem = (item: WorkConnectionEdges, i: number) => {
           <Image
             priority={i === 0}
             src={item.node.images[0] as string}
-            alt={""}
+            alt={item.node?.name ?? ""}
             fill
-            sizes="100vw"
+            quality={75}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             style={{
               zIndex: "-1",
               objectFit: "cover",
@@ -290,28 +294,47 @@ const renderPostListItem = (item: WorkConnectionEdges, i: number) => {
   );
 };
 
-const renderReferenceItem = (item: any, i: number) => (
-  <Flex
-    as={"div"}
-    position="relative"
-    style={{ width: "100%", height: "100%" }}
-  >
-    <Link
-      href={item}
-      target={"_blank"}
+const renderReferenceItem = (item: any, i: number) => {
+  console.log("Rendering reference item:", item);
+  return (
+    <Flex
+      as={"div"}
+      position="relative"
       style={{ width: "100%", height: "100%" }}
-    ></Link>
-    <Image
-      priority={i === 0}
-      src={item}
-      alt={""}
-      fill
-      quality={100}
-      sizes="100vw"
-      style={{
-        zIndex: "-1",
-        objectFit: "cover",
-      }}
-    />
-  </Flex>
-);
+    >
+      <Link
+        href={item}
+        target={"_blank"}
+        style={{ width: "100%", height: "100%" }}
+      ></Link>
+      {item &&
+      (item.includes(".mp4") ||
+        item.includes(".webm") ||
+        item.includes(".ogg")) ? (
+        <video
+          src={item}
+          controls
+          preload="metadata"
+          style={{
+            width: "100%",
+            height: "auto",
+            alignSelf: "flex-start",
+          }}
+        />
+      ) : (
+        <Image
+          priority={i === 0}
+          src={item}
+          alt={""}
+          fill
+          quality={75}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          style={{
+            zIndex: "-1",
+            objectFit: "cover",
+          }}
+        />
+      )}
+    </Flex>
+  );
+};
