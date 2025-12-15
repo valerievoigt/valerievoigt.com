@@ -39,6 +39,19 @@ module.exports = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  async headers() {
+    return [
+      {
+        source: "/uploads/:path*.mp4",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "video/mp4",
+          },
+        ],
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
