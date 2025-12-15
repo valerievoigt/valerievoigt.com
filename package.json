@@ -24,13 +24,13 @@
     "npm": "^10.8.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tinacms": "^2.5.0",
+    "tinacms": "latest",
     "typescript": "5.5.2"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.12",
     "@playwright/test": "^1.47.1",
-    "@tinacms/cli": "^1.6.12",
+    "@tinacms/cli": "latest",
     "@types/node": "^22.5.5",
     "@types/nodemailer": "^6.4.16",
     "eslint": "^8.50.0",
