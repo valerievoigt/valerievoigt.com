@@ -303,16 +303,9 @@ const renderReferenceItem = (item: any, i: number) => {
       style={{ width: "100%", height: "100%" }}
     >
       {item && item.includes(".mp4") ? (
-        <video
-          src={item}
-          controls
-          preload="metadata"
-          style={{
-            width: "100%",
-            height: "auto",
-            alignSelf: "flex-start",
-          }}
-        />
+        <div className="iframe-container">
+          <iframe loading="lazy" src={item} allowFullScreen />
+        </div>
       ) : (
         <Link
           href={item}
