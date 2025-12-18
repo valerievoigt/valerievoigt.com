@@ -147,7 +147,6 @@ export const RichTextField: Template = {
       label: "Element",
       type: "rich-text",
       isBody: true,
-      toolbarOverride: customToolbar,
     },
   ],
 } as const;
