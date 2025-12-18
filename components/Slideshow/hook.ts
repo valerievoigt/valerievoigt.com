@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export const useSlideshow = (slideshowSettings?: { timeout?: number }) => {
   const slideshowContainer = useRef<HTMLElement>(null);
@@ -21,7 +21,7 @@ export const useSlideshow = (slideshowSettings?: { timeout?: number }) => {
     });
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const containerWidth = slideshow.current?.scrollWidth;
     const numberOfImages = getNumberOfImages(containerWidth);
 
@@ -29,17 +29,21 @@ export const useSlideshow = (slideshowSettings?: { timeout?: number }) => {
       return;
     }
 
-    if (displayedSlide < numberOfImages) {
-      const nextScrollPosition = slideWidth * displayedSlide;
-      scrollToPosition(nextScrollPosition);
-      setDisplayedSlide(displayedSlide + 1);
-    }
+    setDisplayedSlide((current) => {
+      if (current < numberOfImages) {
+        const nextScrollPosition = slideWidth * current;
+        scrollToPosition(nextScrollPosition);
+        return current + 1;
+      }
 
-    if (displayedSlide === numberOfImages) {
-      scrollToPosition(0);
-      setDisplayedSlide(1);
-    }
-  };
+      if (current === numberOfImages) {
+        scrollToPosition(0);
+        return 1;
+      }
+
+      return current;
+    });
+  }, [slideWidth]);
 
   const previousSlide = () => {
     if (displayedSlide > 1) {

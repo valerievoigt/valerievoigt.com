@@ -10,7 +10,7 @@ import {
   type Template,
 } from "tinacms";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import client from "../../tina/__generated__/client";
+import { getPosts, getReference } from "../../lib/tinacms";
 import type { WorkConnectionEdges } from "../../tina/__generated__/types";
 import { type ReferenceRelativePath } from "../../tina/components";
 import {
@@ -152,22 +152,12 @@ export default function Grid({
   }, [gridItems]);
 
   useEffect(() => {
-    const getPosts = async () =>
-      (await client.queries.workConnection()).data.workConnection.edges;
-
-    const getReference = async () =>
-      (
-        await client.queries.work({
-          relativePath: content as ReferenceRelativePath,
-        })
-      ).data;
-
     if (variant === GridVariant["Rich-Text"]) {
       setGridItems(content);
     }
 
     if (variant === GridVariant["Reference"]) {
-      getReference()
+      getReference(content as ReferenceRelativePath)
         .then((reference) =>
           setGridItems(
             reference.work.images
