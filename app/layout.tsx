@@ -1,13 +1,13 @@
 import { Container, Flex, Theme, Text } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { Kode_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import React from "react";
 import "../styles/main.css";
 import Link from "next/link";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
 
-const kode_mono = Kode_Mono({
+const kode_mono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-kode_mono",

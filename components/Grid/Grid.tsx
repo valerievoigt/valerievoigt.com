@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Flex, Grid as RadixGrid, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
