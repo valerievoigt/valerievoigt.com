@@ -35,7 +35,6 @@
 
 @supports (color: color(display-p3 1 1 1)) {
   @media (color-gamut: p3) {
-
     :root,
     .light,
     .light-theme {
@@ -70,7 +69,6 @@
       --purple-indicator: oklch(64% 0.2861 324.1);
       --purple-track: oklch(64% 0.2861 324.1);
 
-
       --accent-1: var(--purple-1);
       --accent-2: var(--purple-2);
       --accent-3: var(--purple-3);
@@ -103,10 +101,10 @@
 .light,
 .light-theme,
 .radix-themes {
-  --color-background: #FDD3D0;
+  --color-background: #fdd3d0;
 }
 .radix-themes {
-  --default-font-family: var(--font-kode_mono);
+  --default-font-family: var(--font-kode-mono);
   --font-weight-light: 200;
   --font-weight-regular: 300;
   --font-weight-medium: 600;
@@ -183,6 +181,6 @@
     left: 0;
     background-color: lightpink;
     z-index: 2;
-      filter: opacity(0.3);
+    filter: opacity(0.3);
   }
 }

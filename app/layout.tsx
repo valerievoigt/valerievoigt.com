@@ -1,16 +1,15 @@
 import { Container, Flex, Theme, Text } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Kode_Mono } from "next/font/google";
 import React from "react";
 import "../styles/main.css";
 import Link from "next/link";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
 
-const kode_mono = JetBrains_Mono({
+const kode_mono = Kode_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-kode_mono",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={kode_mono.variable}>
+    <html lang="en" className={kode_mono.className}>
+      <head />
       <body style={{ margin: 0, backgroundColor: "#FDD3D0" }}>
         <Theme accentColor={"purple"} appearance={"light"}>
           <main>
